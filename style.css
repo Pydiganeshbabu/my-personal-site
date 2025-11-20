@@ -1,283 +1,167 @@
-/* --- Color Variables --- */
-:root {
-    --color-orange: #FF8C00; /* Primary Accent */
-    --color-dark: #333333; /* Dark Column Background */
-    --color-light: #F5F5F5; /* Light Column/Body Background */
-    --color-text-dark: #444444; 
-    --color-text-light: #FFFFFF;
-    --color-header-bg: #FFFFFF;
-}
-
-/* --- Global & Reset Styles --- */
-* {
-    box-sizing: border-box;
+/* General Layout and Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-body {
-    /* Fonts used for the "flashy" look and professional design */
-    font-family: 'Montserrat', sans-serif; 
-    color: var(--color-text-dark);
-    background-color: var(--color-light); 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: #1a1a1a;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* --- Header Styling --- */
+/* Header and Navigation Styles */
 .main-header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: var(--color-header-bg); 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
-}
-
-/* Flashy Logo Styling */
-.logo-wrapper {
-    display: flex;
     align-items: center;
 }
 
 .logo-text-flashy {
-    font-family: 'Oswald', sans-serif; /* A bold, impactful font */
-    font-size: 28px; 
-    font-weight: 700; 
-    color: var(--color-dark);
-    letter-spacing: 1px; 
-    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #3498db; /* Civil Might brand color example */
 }
 
-/* Navigation Links */
 .main-nav a {
-    margin-left: 25px;
-    font-size: 14px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
     font-weight: 500;
-    color: var(--color-text-dark);
-    opacity: 0.8;
     transition: color 0.3s;
 }
+
 .main-nav a:hover {
-    color: var(--color-orange);
+    color: #3498db;
 }
 
-/* Header Contact/Button Group */
-.header-contact {
+/* services-page-content Structure */
+.services-page-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Two-Column Service Block Layout */
+.service-details-container {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
 }
 
-.nav-button {
-    background-color: var(--color-orange);
-    color: var(--color-text-light) !important;
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-    white-space: nowrap; 
+.service-block {
+    width: 45%;
+    min-width: 300px;
+    margin: 20px 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    transition: transform 0.3s;
 }
 
-.nav-button:hover {
-    background-color: #e07b00; 
+.service-block:hover {
+    transform: translateY(-5px);
 }
 
-.back-button {
-    background-color: var(--color-dark); 
-    color: var(--color-text-light) !important;
-}
-.back-button:hover {
-    background-color: #444;
-}
-
-/* --- Hero Section Styling (Homepage) --- */
-.hero-section {
-    display: flex;
-    min-height: 70vh; 
-}
-
-.hero-left {
-    flex: 1; 
-    background-color: var(--color-dark);
-    color: var(--color-text-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 5%;
+.service-block h2 {
+    color: #e74c3c; /* A strong accent color */
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
-.hero-left h1 {
-    font-size: 3.2rem; 
-    margin-bottom: 10px;
-    line-height: 1.1;
-    font-weight: 700;
+.service-block ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.hero-left p {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    opacity: 0.8;
-    font-weight: 400;
+.service-block li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+    border-bottom: 1px dotted #e0e0e0;
 }
 
-.cta-button {
-    border: 1px solid var(--color-orange);
-    color: var(--color-text-light);
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 0.9rem;
-    width: fit-content;
-    transition: background-color 0.3s, border-color 0.3s;
+.service-block li:before {
+    content: "🏗️"; /* Icon for list item */
+    margin-right: 10px;
+    color: #3498db;
 }
 
-.cta-button:hover {
-    background-color: var(--color-orange);
+.service-block li:last-child {
+    border-bottom: none;
 }
 
-.hero-right {
-    flex: 1; 
-    background-color: var(--color-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
-}
-
-.sketch-image {
-    max-width: 70%; 
-    height: auto;
-    margin-bottom: 30px;
-}
-
-.contact-info {
-    padding-top: 20px; 
-}
-
-.contact-info h2 {
-    font-size: 1.3rem;
-    color: var(--color-orange);
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.contact-info p {
-    line-height: 2;
-    font-size: 0.9rem;
-    color: var(--color-text-dark);
-}
-
-.availability-caption {
-    font-size: 0.85rem;
-    color: var(--color-orange);
-    font-weight: bold;
-    display: block; 
-    margin-top: 10px;
-}
-
-/* --- Services Page & Project Gallery Styling --- */
-.services-page-content {
-    padding: 40px 5%;
-    text-align: center;
-    max-width: 1200px;
-    margin: 30px auto 0 auto; 
-    background-color: #FFFFFF; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-    border-radius: 8px;
-}
-
-.services-page-content h1 {
-    font-size: 3rem;
-    color: var(--color-dark);
-    margin-bottom: 40px;
-}
-
-.full-flyer-image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
+/* Contact Info Section */
 .services-contact-info {
+    text-align: center;
+    padding: 30px 0;
     margin-top: 40px;
-    padding: 30px;
-    background-color: var(--color-light); 
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border-top: 1px solid #ccc;
 }
 
 .services-contact-info h3 {
-    color: var(--color-orange);
-    font-size: 1.8rem;
+    font-size: 1.5em;
+    color: #2c3e50;
     margin-bottom: 15px;
 }
 
 .services-contact-info p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-/* Project Gallery Styling */
-.projects-section {
-    padding: 60px 5%;
-    background-color: var(--color-light); 
+.availability-caption {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* --- New Style for Home Button at the bottom --- */
+.return-home-footer {
     text-align: center;
-    margin-top: 30px; 
+    padding: 30px 0 50px 0;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    color: var(--color-dark);
-    margin-bottom: 40px;
-}
-
-.category-title {
-    font-size: 1.8rem;
-    color: var(--color-orange);
-    border-bottom: 2px solid var(--color-dark);
-    padding-bottom: 10px;
-    margin: 60px auto 40px auto; 
-    display: inline-block; 
-}
-
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
-    flex-wrap: wrap;
-    margin-bottom: 40px; 
-}
-
-.project-item {
-    border: 1px solid #ddd;
+.return-home-footer .nav-button {
+    /* Styles for the prominent button */
+    background-color: #3498db; 
+    color: white;
+    padding: 15px 30px;
     border-radius: 8px;
-    padding: 15px;
-    width: 400px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    max-height: 250px; 
-    object-fit: cover; 
-    border-radius: 4px;
-    margin-bottom: 10px;
+.return-home-footer .nav-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
 }
 
-.project-item p {
-    font-weight: bold;
-    color: var(--color-text-dark);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-block {
+        width: 100%;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
 }
