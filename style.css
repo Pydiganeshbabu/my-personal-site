@@ -13,6 +13,31 @@ h1, h2, h3 {
     color: #1a1a1a;
 }
 
+/* --- New Style for Main Section Titles --- */
+.section-title {
+    font-size: 2.5em; /* Make it stand out */
+    font-weight: 800;
+    color: #2c3e50; /* Darker than the other headings for contrast */
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Center the pseudo-element */
+    transform: translateX(-50%);
+    width: 80px; /* Short, prominent line */
+    height: 4px;
+    background-color: #e74c3c; /* Use the strong accent color */
+    border-radius: 2px;
+}
+/* --- End New Style --- */
+
+
 /* Header and Navigation Styles */
 .main-header {
     background-color: #ffffff;
@@ -128,7 +153,7 @@ h1, h2, h3 {
     color: #7f8c8d;
 }
 
-/* --- New Style for Home Button at the bottom --- */
+/* New Style for Home Button at the bottom */
 .return-home-footer {
     text-align: center;
     padding: 30px 0 50px 0;
@@ -136,7 +161,7 @@ h1, h2, h3 {
 
 .return-home-footer .nav-button {
     /* Styles for the prominent button */
-    background-color: #3498db; 
+    background-color: #3498db;
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
