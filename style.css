@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
 /* General Layout and Typography */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -13,32 +15,7 @@ h1, h2, h3 {
     color: #1a1a1a;
 }
 
-/* --- New Style for Main Section Titles --- */
-.section-title {
-    font-size: 2.5em; /* Make it stand out */
-    font-weight: 800;
-    color: #2c3e50; /* Darker than the other headings for contrast */
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    text-align: center;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Center the pseudo-element */
-    transform: translateX(-50%);
-    width: 80px; /* Short, prominent line */
-    height: 4px;
-    background-color: #e74c3c; /* Use the strong accent color */
-    border-radius: 2px;
-}
-/* --- End New Style --- */
-
-
-/* Header and Navigation Styles */
+/* --- Header and Navigation Styles --- */
 .main-header {
     background-color: #ffffff;
     padding: 15px 30px;
@@ -51,7 +28,7 @@ h1, h2, h3 {
 .logo-text-flashy {
     font-size: 1.8em;
     font-weight: 700;
-    color: #3498db; /* Civil Might brand color example */
+    color: #ff7800; /* Orange */
 }
 
 .main-nav a {
@@ -63,17 +40,108 @@ h1, h2, h3 {
 }
 
 .main-nav a:hover {
-    color: #3498db;
+    color: #ff7800; /* Orange */
 }
 
-/* services-page-content Structure */
+.header-contact .nav-button {
+    background-color: #ff7800; /* Orange Button */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header-contact .nav-button:hover {
+    background-color: #cc6000;
+}
+
+
+/* --- HOME PAGE HERO SECTION (Matching Mockup) --- */
+.home-hero-section {
+    display: flex;
+    min-height: 80vh; /* Takes up most of the viewport height */
+}
+
+.hero-left {
+    background-color: #333333; /* Dark Gray/Black from mockup */
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-left h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+    text-align: left; /* Adjust alignment to match mockup */
+    max-width: 80%;
+}
+
+.hero-left p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ccc;
+    text-align: left;
+    max-width: 80%;
+}
+
+.hero-left .view-work-button {
+    background-color: transparent;
+    border: 2px solid #ff7800; /* Orange border */
+    color: #ff7800; /* Orange text */
+    padding: 10px 25px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-left .view-work-button:hover {
+    background-color: #ff7800;
+    color: white;
+}
+
+.hero-right {
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-right h2 {
+    color: #ff7800; /* Orange */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero-right .sketch-wrapper img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
+.hero-right .contact-social-info p {
+    color: #555;
+    margin: 5px 0;
+}
+
+
+/* --- SERVICES PAGE CONTENT STYLES --- */
 .services-page-content {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Two-Column Service Block Layout */
 .service-details-container {
     display: flex;
     justify-content: space-around;
@@ -98,7 +166,7 @@ h1, h2, h3 {
 }
 
 .service-block h2 {
-    color: #e74c3c; /* A strong accent color */
+    color: #444444; /* Dark Gray/Black */
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -118,16 +186,15 @@ h1, h2, h3 {
 }
 
 .service-block li:before {
-    content: "🏗️"; /* Icon for list item */
+    content: "🏗️"; 
     margin-right: 10px;
-    color: #3498db;
+    color: #ff7800; /* Orange */
 }
 
 .service-block li:last-child {
     border-bottom: none;
 }
 
-/* Contact Info Section */
 .services-contact-info {
     text-align: center;
     padding: 30px 0;
@@ -141,27 +208,77 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-.services-contact-info p {
-    font-size: 1.2em;
-    margin: 10px 0;
+/* --- PROJECT GALLERY STYLES --- */
+.projects-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
 }
 
-.availability-caption {
+.projects-section .section-title {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #1a1a1a;
+}
+
+.projects-section .category-title {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #444444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
-    margin-top: 10px;
-    font-style: italic;
-    color: #7f8c8d;
+    border-bottom: 1px solid #eee;
 }
 
-/* New Style for Home Button at the bottom */
+.project-item p {
+    padding: 15px;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* --- Style for Home Button at the bottom --- */
 .return-home-footer {
     text-align: center;
     padding: 30px 0 50px 0;
+    background-color: #f4f4f4; 
 }
 
 .return-home-footer .nav-button {
-    /* Styles for the prominent button */
-    background-color: #3498db;
+    background-color: #ff7800; /* Orange */
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
@@ -173,14 +290,21 @@ h1, h2, h3 {
 }
 
 .return-home-footer .nav-button:hover {
-    background-color: #2980b9;
+    background-color: #cc6000; /* Darker orange on hover */
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
+/* --- Responsive adjustments --- */
 @media (max-width: 768px) {
     .service-block {
         width: 100%;
+    }
+    .home-hero-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .hero-left, .hero-right {
+        min-height: 50vh;
     }
     .main-header {
         flex-direction: column;
@@ -188,5 +312,8 @@ h1, h2, h3 {
     }
     .main-nav {
         margin-top: 10px;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
     }
 }
